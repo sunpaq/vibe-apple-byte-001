@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ar-config>
+    <required-software>
+        <software name="ar" minVersion="1.0" maxVersion="100.0" />
+    </required-software>
+    <optional-software>
+        <software name="depth" minVersion="1.0" maxVersion="100.0" />
+    </optional-software>
+    <required-features>
+        <feature name="arm64-v8a" />
+    </required-features>
+</ar-config>

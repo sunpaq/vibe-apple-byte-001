@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apple Wound Detector</string>
+    <string name="ar_loading">Initializing AR...</string>
+    <string name="ar_not_supported">ARCore is not supported on this device</string>
+    <string name="ar_not_installed">Please install ARCore from Play Store</string>
+    <string name="permission_camera_required">Camera permission is required for this app</string>
+    <string name="capture">Capture</string>
+    <string name="measure">Measure</string>
+    <string name="wound_area">Wound Area</string>
+    <string name="wound_depth">Wound Depth</string>
+    <string name="marker_detected">ArUco Marker Detected</string>
+    <string name="marker_not_detected">No ArUco Marker Detected</string>
+    <string name="depth_available">Depth Available</string>
+    <string name="depth_not_available">Depth Not Available</string>
+    <string name="instructions">Point camera at ArUco marker and bitten apple</string>
+    <string name="result_wound_area">Wound Area: %1$.2f mm²</string>
+    <string name="result_wound_depth">Wound Depth: %1$.2f mm</string>
+</resources>

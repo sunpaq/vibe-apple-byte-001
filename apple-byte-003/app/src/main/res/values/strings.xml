@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apple Byte 003</string>
+    <string name="capture_instructions">Place ArUco marker near apple and capture from multiple angles</string>
+    <string name="capture_progress">Photo %1$d of %2$d</string>
+    <string name="start_capture">Start Capture</string>
+    <string name="capture">Capture</string>
+    <string name="processing">Processing...</string>
+    <string name="results">Results</string>
+    <string name="wound_area">Wound Area</string>
+    <string name="wound_depth">Wound Depth</string>
+    <string name="mm2">mm²</string>
+    <string name="mm">mm</string>
+    <string name="reset">Reset</string>
+    <string name="no_wound_detected">No wound detected</string>
+    <string name="aruco_not_found">ArUco marker not found</string>
+    <string name="insufficient_photos">Need more photos for depth estimation</string>
+    <string name="place_marker">Place ArUco marker (4x4_50) near the apple</string>
+    <string name="move_camera">Move camera around the apple in a circle</string>
+    <string name="hold_steady">Hold steady and tap to capture</string>
+    <string name="good_capture">Good capture!</string>
+    <string name="camera_permission_required">Camera permission is required</string>
+    <string name="sfm_failed">SfM processing failed</string>
+    <string name="tap_to_capture">Tap to capture photo</string>
+</resources>

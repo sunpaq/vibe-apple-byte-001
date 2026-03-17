@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Apple body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,28 C38,28 26,42 26,58 C26,74 38,86 54,86 C70,86 82,74 82,58 C82,42 70,28 54,28 Z"/>
+    <!-- Apple stem -->
+    <path
+        android:fillColor="#795548"
+        android:pathData="M52,28 L52,18 L56,18 L56,28 Z"/>
+    <!-- Apple leaf -->
+    <path
+        android:fillColor="#4CAF50"
+        android:pathData="M54,22 Q62,16 66,22 Q62,28 54,22 Z"/>
+    <!-- Bite mark -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M72,58 Q82,52 82,62 Q82,72 72,72 Q68,72 68,68 L68,62 Q68,58 72,58 Z"/>
+</vector>

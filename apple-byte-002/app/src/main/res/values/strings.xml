@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apple Byte 002</string>
+    <string name="ar_loading">Initializing AR...</string>
+    <string name="wound_area">Wound Area</string>
+    <string name="wound_depth">Wound Depth</string>
+    <string name="capture">Capture</string>
+    <string name="reset">Reset</string>
+    <string name="camera_permission_required">Camera permission is required for AR</string>
+    <string name="arcore_not_supported">ARCore is not supported on this device</string>
+    <string name="detecting">Detecting...</string>
+    <string name="no_wound_detected">No wound detected</string>
+    <string name="mm2">mm²</string>
+    <string name="mm">mm</string>
+    <string name="marker_not_found">Place ArUco marker in view</string>
+    <string name="depth_not_available">Depth not available</string>
+</resources>

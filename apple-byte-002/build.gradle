@@ -1,0 +1,18 @@
+buildscript {
+    ext.kotlin_version = '2.2.10'
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:9.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}

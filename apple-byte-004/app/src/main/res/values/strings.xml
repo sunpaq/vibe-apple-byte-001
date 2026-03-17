@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apple Byte 004</string>
+    <string name="welcome_title">Apple Wound Detector</string>
+    <string name="welcome_subtitle">Detect wound area and depth on bitten apples using AR technology</string>
+    <string name="start_button">Start Detection</string>
+    <string name="instructions_title">How to Use</string>
+    <string name="instruction_1">1. Place the ArUco marker next to the apple</string>
+    <string name="instruction_2">2. The marker provides scale reference</string>
+    <string name="instruction_3">3. Capture 10 photos from different angles</string>
+    <string name="instruction_4">4. Wait for analysis to complete</string>
+    <string name="capture_title">Capture Photos</string>
+    <string name="capture_progress">Photo %1$d of %2$d</string>
+    <string name="capture_hint_move">Move around the apple</string>
+    <string name="capture_hint_marker">Keep marker in view</string>
+    <string name="capture_success">Photo captured!</string>
+    <string name="processing_title">Analyzing...</string>
+    <string name="processing_message">Processing images and calculating depth</string>
+    <string name="results_title">Analysis Results</string>
+    <string name="wound_area_label">Wound Area</string>
+    <string name="wound_depth_label">Estimated Depth</string>
+    <string name="unit_mm">mm</string>
+    <string name="unit_mm2">mm²</string>
+    <string name="retry_button">Try Again</string>
+    <string name="camera_permission_required">Camera permission is required</string>
+    <string name="error_no_marker">No ArUco marker detected</string>
+    <string name="error_insufficient_points">Not enough feature points detected</string>
+    <string name="aruco_marker_size">Marker Size: 50mm</string>
+</resources>

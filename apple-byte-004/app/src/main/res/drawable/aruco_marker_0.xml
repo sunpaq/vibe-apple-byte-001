@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="400dp"
+    android:viewportWidth="400"
+    android:viewportHeight="400">
+    
+    <!-- White background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0h400v400h-400z"/>
+    
+    <!-- Marker ID: 0 (outer black border) -->
+    <!-- Top-left corner -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,20h80v80h-80z"/>
+    
+    <!-- Top-right corner -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M300,20h80v80h-80z"/>
+    
+    <!-- Bottom-left corner -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M20,300h80v80h-80z"/>
+    
+    <!-- Bottom-right corner -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M300,300h80v80h-80z"/>
+    
+    <!-- Inner grid pattern (ID 0: 0,0,1,0,1,1,1,1,1,0,0,0,0,1,0,1) -->
+    <!-- Row 1: 0,0,1,0 -->
+    <path android:fillColor="#000000" android:pathData="M120,100h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M140,100h20v20h-20z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M160,100h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M180,100h20v20h-20z"/>
+    
+    <!-- Row 2: 1,1,1,1 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M120,120h20v20h-20z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M140,120h20v20h-20z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M160,120h20v20h-20z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M180,120h20v20h-20z"/>
+    
+    <!-- Row 3: 0,0,0,0 -->
+    <path android:fillColor="#000000" android:pathData="M120,140h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M140,140h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M160,140h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M180,140h20v20h-20z"/>
+    
+    <!-- Row 4: 1,0,1 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M120,160h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M140,160h20v20h-20z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M160,160h20v20h-20z"/>
+    <path android:fillColor="#000000" android:pathData="M180,160h20v20h-20z"/>
+    
+    <!-- ID label -->
+    <path
+        android:fillColor="#1976D2"
+        android:pathData="M170,200h60v30h-60z"/>
+</vector>

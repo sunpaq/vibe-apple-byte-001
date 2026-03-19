@@ -16,6 +16,7 @@ import kotlinx.coroutines.*
 import org.opencv.android.Utils
 import org.opencv.core.Mat
 import org.opencv.core.MatOfPoint2f
+import org.opencv.core.Point3
 import java.io.File
 
 class ProcessingFragment : Fragment() {
@@ -103,15 +104,20 @@ class ProcessingFragment : Fragment() {
                     woundAnalysis.estimatedDepthMm
                 }
 
+                val points3d = sfmResult.points3d.map { 
+                    Triple(it.x.toFloat(), it.y.toFloat(), it.z.toFloat()) 
+                }
+
                 withContext(Dispatchers.Main) {
                     binding.processingProgress.progress = 100
 
                     val resultImagePath = saveResultImage(images.first(), woundAnalysis)
 
-                    (activity as? MainActivity)?.navigateToResults(
+                    (activity as? MainActivity)?.navigateToResultsWithPoints(
                         woundAnalysis.woundAreaMm2,
                         depthMm,
-                        resultImagePath ?: imagePaths.firstOrNull() ?: ""
+                        resultImagePath ?: imagePaths.firstOrNull() ?: "",
+                        points3d
                     )
                 }
 

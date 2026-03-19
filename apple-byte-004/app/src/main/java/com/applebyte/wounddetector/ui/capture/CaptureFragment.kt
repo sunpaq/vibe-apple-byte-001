@@ -150,6 +150,10 @@ class CaptureFragment : Fragment() {
             .setBackpressureStrategy(ImageAnalysis.STRATEGY_KEEP_ONLY_LATEST)
             .build()
 
+        var stableDetectionCount = 0
+        var lastStableDistance = 0.0
+        val stabilityThreshold = 3
+
         imageAnalysis.setAnalyzer(cameraExecutor) { imageProxy ->
             if (!analysisEnabled || isProcessing) {
                 imageProxy.close()
@@ -163,19 +167,46 @@ class CaptureFragment : Fragment() {
 
                     mainHandler.post {
                         if (detections.isNotEmpty()) {
-                            lastMarkerDistance = detections.first().distance
-                            binding.markerStatusText.text = getString(R.string.aruco_marker_size) +
-                                " | Distance: ${String.format("%.1f", lastMarkerDistance)}mm"
+                            val bestDetection = detections.first()
+                            lastMarkerDistance = bestDetection.distance
+                            
+                            val markerId = bestDetection.id
+                            val confidence = bestDetection.confidence
+                            val confidencePercent = (confidence * 100).toInt()
+                            
+                            binding.markerStatusText.text = "Marker ID: $markerId | ${confidencePercent}% confidence"
                             binding.markerStatusText.setTextColor(
                                 ContextCompat.getColor(requireContext(), R.color.success)
                             )
-                            binding.captureButton.isEnabled = true
+                            
+                            if (confidence > 0.6) {
+                                stableDetectionCount++
+                                if (stableDetectionCount >= stabilityThreshold) {
+                                    binding.captureButton.isEnabled = true
+                                    binding.captureHintText.text = "Marker $markerId stable! Tap to capture"
+                                    binding.captureHintText.setTextColor(
+                                        ContextCompat.getColor(requireContext(), R.color.success)
+                                    )
+                                }
+                            } else {
+                                stableDetectionCount = 0
+                                binding.captureButton.isEnabled = capturedImages.isNotEmpty()
+                                binding.captureHintText.text = getString(R.string.capture_hint_move)
+                                binding.captureHintText.setTextColor(
+                                    ContextCompat.getColor(requireContext(), android.R.color.white)
+                                )
+                            }
                         } else {
+                            stableDetectionCount = 0
                             binding.markerStatusText.text = getString(R.string.capture_hint_marker)
                             binding.markerStatusText.setTextColor(
                                 ContextCompat.getColor(requireContext(), R.color.error)
                             )
                             binding.captureButton.isEnabled = capturedImages.isNotEmpty()
+                            binding.captureHintText.text = getString(R.string.capture_hint_marker)
+                            binding.captureHintText.setTextColor(
+                                ContextCompat.getColor(requireContext(), R.color.error)
+                            )
                         }
                     }
                 }

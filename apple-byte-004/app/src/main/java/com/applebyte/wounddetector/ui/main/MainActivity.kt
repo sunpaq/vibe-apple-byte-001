@@ -56,6 +56,11 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(fragment)
     }
 
+    fun navigateToResultsWithPoints(areaMm2: Double, depthMm: Double, imagePath: String, points3d: List<Triple<Float, Float, Float>>) {
+        val fragment = ResultsFragment.newInstanceWithPoints(areaMm2, depthMm, imagePath, points3d)
+        replaceFragment(fragment)
+    }
+
     fun navigateToWelcome() {
         replaceFragment(WelcomeFragment.newInstance())
     }

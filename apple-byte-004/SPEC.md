@@ -36,8 +36,9 @@
 
 2. **ArUco Marker Detection**
    - Real-time marker detection in camera preview
-   - 6x6 ArUco dictionary (DICT_6X6_250)
+   - 4x4 ArUco dictionary (DICT_4X4_50)
    - Scale reference calculation from marker size
+   - draw marker contour use light green color line
 
 3. **Structure-from-Motion Processing**
    - Feature extraction using ORB
@@ -54,7 +55,7 @@
    - Wound depth calculation in mm
 
 5. **Results Display**
-   - 3D point cloud visualization (simplified)
+   - 3D point cloud visualization, able to rotate the scene
    - Wound area overlay on reference image
    - Depth measurement display
    - Export/save functionality
